@@ -14,12 +14,12 @@ savePath2 = "G:/Python/python_auto/chapter1/index.html"
 f = dw.urlopen(imgURL).read()
 f2 = dw.urlopen(htmlURL).read()
 
-# 저장하는 방법
+# 저장 방법1
 saveFile1 = open(savePath1,'wb') # w: write , r : read, a : add
 saveFile1.write(f)
 saveFile1.close()
 
-# with문 사용하여 저장하는 방법 - close가 자동
+# 저장 방법2 - with 문을 사용하면 close가 자동
 with open(savePath2,'wb') as saveFile2:
     saveFile2.write(f2)
 
