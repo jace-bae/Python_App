@@ -33,7 +33,7 @@ html = """
 
 soup = BeautifulSoup(html,'html.parser')
 
-# 태그 선택자
+# 태그 선택자1
 h1 = soup.h1
 print(h1.string)
 p1 = soup.p
@@ -44,6 +44,7 @@ p3 = p2.previous_sibling.previous_sibling
 print(p3.string)
 print()
 
+# 태그 선택자2
 link = soup.find_all('a')
 for li in link:
     href = li.attrs['href']
